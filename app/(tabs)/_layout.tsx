@@ -1,35 +1,65 @@
 import { Tabs } from 'expo-router';
-import React from 'react';
-
-import { HapticTab } from '@/components/haptic-tab';
-import { IconSymbol } from '@/components/ui/icon-symbol';
-import { Colors } from '@/constants/theme';
-import { useColorScheme } from '@/hooks/use-color-scheme';
+import { Ionicons } from '@expo/vector-icons';
+import { GameProvider } from '../../context/GameContext';
 
 export default function TabLayout() {
-  const colorScheme = useColorScheme();
-
   return (
-    <Tabs
-      screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
-        headerShown: false,
-        tabBarButton: HapticTab,
-      }}>
-      <Tabs.Screen
-        name="index"
-        options={{
-          title: 'Home',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
+    <GameProvider>
+      <Tabs
+        screenOptions={{
+          headerShown: false,
+          tabBarStyle: {
+            backgroundColor: '#020617',
+            borderTopColor: '#1e293b',
+            height: 72,
+            paddingBottom: 8,
+            paddingTop: 8,
+          },
+          tabBarActiveTintColor: '#facc15',
+          tabBarInactiveTintColor: '#94a3b8',
+          tabBarLabelStyle: {
+            fontSize: 12,
+            fontWeight: '600',
+          },
         }}
-      />
-      <Tabs.Screen
-        name="explore"
-        options={{
-          title: 'Explore',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
-        }}
-      />
-    </Tabs>
+      >
+        <Tabs.Screen
+          name="index"
+          options={{
+            title: 'Home',
+            tabBarIcon: ({ color, size }) => (
+              <Ionicons name="home" size={size} color={color} />
+            ),
+          }}
+        />
+        <Tabs.Screen
+          name="map"
+          options={{
+            title: 'Map',
+            tabBarIcon: ({ color, size }) => (
+              <Ionicons name="map" size={size} color={color} />
+            ),
+          }}
+        />
+        <Tabs.Screen
+          name="actions"
+          options={{
+            title: 'Actions',
+            tabBarIcon: ({ color, size }) => (
+              <Ionicons name="flash" size={size} color={color} />
+            ),
+          }}
+        />
+        <Tabs.Screen
+          name="character"
+          options={{
+            title: 'Character',
+            tabBarIcon: ({ color, size }) => (
+              <Ionicons name="person" size={size} color={color} />
+            ),
+          }}
+        />
+      </Tabs>
+    </GameProvider>
   );
 }
