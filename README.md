@@ -25,9 +25,6 @@ A mobile-first tabletop RPG companion app built using React Native and Expo. Thi
 - **Actions** – Input actions, dice rolls, and view results
 - **Character** – Player stats and inventory
 
-## Demo
-
-(Add screenshots here)
 
 ## Future Improvements
 
