@@ -1,50 +1,41 @@
-# Welcome to your Expo app 👋
+# DND Visual Companion
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A mobile-first tabletop RPG companion app built using React Native and Expo. This app enhances in-person gameplay by providing a clean, interactive interface for tracking game state, player actions, and battle maps.
 
-## Get started
+## Features
 
-1. Install dependencies
+- Interactive battle map with movable tokens
+- Turn tracking system
+- Action input with dice roll handling
+- Real-time result updates
+- Shared game state across multiple screens
+- Character overview and campaign dashboard
 
-   ```bash
-   npm install
-   ```
+## Tech Stack
 
-2. Start the app
+- React Native
+- Expo
+- TypeScript
+- React Context API (state management)
 
-   ```bash
-   npx expo start
-   ```
+## Screens
 
-In the output, you'll find options to open the app in a
+- **Home** – Campaign overview, turn tracking, and recent events
+- **Map** – Interactive battle map with token movement
+- **Actions** – Input actions, dice rolls, and view results
+- **Character** – Player stats and inventory
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## Demo
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+(Add screenshots here)
 
-## Get a fresh project
+## Future Improvements
 
-When you're ready, run:
+- AI-generated scene visuals
+- Multiplayer synchronization
+- Voice input for dungeon master narration
+- Enhanced UI/UX with game-style animations
 
-```bash
-npm run reset-project
-```
+---
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Built as a personal project to explore mobile development, UI/UX design, and real-time state management.
